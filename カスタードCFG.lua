@@ -2,11 +2,6 @@ local mp = require 'mp'
 
 local opts = {
   keepaspect_window = 'yes',
-  video_aspect = '1920:1080',
-
-  video_pan_x = '0',
-  video_pan_y = '-0.38',
-  video_zoom = '-0.1',
   video_margin_ratio_top = '0.04',
   video_margin_ratio_left = '0.04',
   video_margin_ratio_right = '0.04',

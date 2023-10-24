@@ -81,18 +81,25 @@ function statusline()
 end
 
 function main()
-    -- this prevents output conflict with piko
     if not file_extension(mp.get_property("path")) then
-        return
+        mp.set_property("video-pan-x", "0")
+        mp.set_property("video-pan-y", "-0.15")
+        mp.set_property("video-zoom", "-0.6")
+        mp.set_property("video-aspect", "none")
     else
-        window_size()
-        --[[  uncomment the oommand below if you want to
-              have the video paused when window is unfocused
-        --]]
-        -- mp.observe_property("focused", "string", window_focus)
-        mp.observe_property("duration", "number", statusline)
-        mp.observe_property("time-pos", "number", statusline)
+        mp.set_property("video-pan-x", "0")
+        mp.set_property("video-pan-y", "-0.38")
+        mp.set_property("video-zoom", "-0.1")
+        mp.set_property("video-aspect", "1920:1080")
     end
+
+    window_size()
+    --[[  uncomment the oommand below if you want to
+          have the video paused when window is unfocused
+    --]]
+    -- mp.observe_property("focused", "string", window_focus)
+    mp.observe_property("duration", "number", statusline)
+    mp.observe_property("time-pos", "number", statusline)
 end
 
 mp.register_event("file-loaded", main)
