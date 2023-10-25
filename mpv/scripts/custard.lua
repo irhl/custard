@@ -1,7 +1,5 @@
---[[  Name: カスタード
-      Author: irhl
+--[[  License: The MIT License (MIT)
       Source: https://github.com/irhl/custard
-      License: The MIT License (MIT)
 
       Fonts:
       CozetteVector, Scientifica
