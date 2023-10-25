@@ -82,12 +82,9 @@ end
 
 function main()
     if not file_extension(mp.get_property("path")) then
-        mp.set_property("video-pan-x", "0")
         mp.set_property("video-pan-y", "-0.15")
         mp.set_property("video-zoom", "-0.6")
-        mp.set_property("video-aspect", "none")
     else
-        mp.set_property("video-pan-x", "0")
         mp.set_property("video-pan-y", "-0.38")
         mp.set_property("video-zoom", "-0.1")
         mp.set_property("video-aspect", "1920:1080")
