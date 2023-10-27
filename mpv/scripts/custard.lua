@@ -1,8 +1,7 @@
 --[[  License: The MIT License (MIT)
       Source: https://github.com/irhl/custard
 
-      Fonts:
-      CozetteVector, Scientifica
+      Fonts: CozetteVector, Scientifica
 
       PLEASE PAY ATTENTION
       before installing this script, there are
@@ -24,7 +23,7 @@ function file_extension(path)
 end
 
 function window_size()
-    local w, h = 520, 520
+    local w, h = 520, 550
     mp.set_property("geometry", string.format("%dx%d", w, h))
 end
 
@@ -73,6 +72,7 @@ function statusline()
         .. "{\\c&Hc3d3e2&\\3c&H687488&}"
         .. string.format("%s / %s", "⏺️"
 	.. timestamp(time_pos), timestamp(duration))
+        .. "\n\n"
 
         mp.osd_message(ass0 .. data .. ass1, 9999)
     end
@@ -81,9 +81,10 @@ end
 function main()
     if not file_extension(mp.get_property("path")) then
         mp.set_property("video-pan-y", "-0.15")
-        mp.set_property("video-zoom", "-0.6")
+        mp.set_property("video-zoom", "-0.5")
+        mp.set_property("video-aspect", "800:800")
     else
-        mp.set_property("video-pan-y", "-0.38")
+        mp.set_property("video-pan-y", "-0.42")
         mp.set_property("video-zoom", "-0.1")
         mp.set_property("video-aspect", "1920:1080")
     end
