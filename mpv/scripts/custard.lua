@@ -40,7 +40,6 @@ function auto_subs()
             break
         end
     end
-    mp.commandv('playlist-move', 'current', '+1')
 end
 
 function timestamp(seconds)
